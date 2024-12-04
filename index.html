@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Creativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            font-weight: bold;
+            display: block;
+        }
+        .question input, .question textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .question button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta de Satisfacción</h1>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <div class="question">
+                <label for="nombre">¿Cómo te llamas?</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="question">
+                <label for="satisfaccion">¿Qué tan satisfecho/a estás con nuestro servicio?</label>
+                <input type="radio" id="satis1" name="satisfaccion" value="1" required> 1
+                <input type="radio" id="satis2" name="satisfaccion" value="2"> 2
+                <input type="radio" id="satis3" name="satisfaccion" value="3"> 3
+                <input type="radio" id="satis4" name="satisfaccion" value="4"> 4
+                <input type="radio" id="satis5" name="satisfaccion" value="5"> 5
+            </div>
+            <div class="question">
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+            <div class="question">
+                <button type="submit">Enviar Encuesta</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
